@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fondo gris claro */
+}
+
+:root {
+    --color1: #ebbb4c;
+    --color2: #8c143c;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Menú Lateral Izquierdo */
+.sidebar {
+    width: 300px;
+    background-color: white; /* Menú de color blanco */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-start; /* Todo pegado al principio */
+    gap: 20px; /* Espacio entre los elementos */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra ligera en el menú */
+}
+
+.logo {
+    text-align: center;
+}
+
+/* Modificación para el logo */
+.logo img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;  /* Limita el ancho máximo */
+    max-height: 150px; /* Limita la altura máxima */
+    object-fit: contain; /* Asegura que mantenga la proporción */
+    display: block;
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
+
+.user-info {
+    text-align: center;
+    font-weight: bold;
+    color: var(--color2);
+}
+
+.menu ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 5px #55555500 solid;
+}
+
+.menu ul li a:hover {
+    background-color: var(--color2); /* Mantener el color de hover */
+    color: white;
+    border-bottom: 5px var(--color1) solid;
+    font-weight: bold;
+}
+
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+    background-color: #f4f4f4; /* Fondo gris claro para el contenido */
+}
+
+/* Botón de Salir */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn-logout {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-new {
+    background-color: var(--color1);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-new2{
+    background-color: var(--color2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-new3{
+    background-color: #aeaeae;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.btn-volver {
+    background-color: #848484;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.content {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para el contenido */
+    border-radius: 8px;
+    flex-grow: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 320px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.btn-secondary, a.btn-secondary {
+    background-color: var(--color2);
+    color: white;
+    text-decoration: none;
+}
+.btn, a.btn-secondary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* Estilos generales para la tabla */
+table {
+    width: 100%; /* La tabla ocupa el 100% del contenedor */
+    border-collapse: separate; /* Usa border-collapse separate para manejar espaciado */
+    border-spacing: 10px; /* Espaciado entre celdas */
+    margin: 0 auto; /* Centra la tabla */
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+/* Estilo para las celdas y encabezados */
+th, td {
+    border: 2px solid black; /* Bordes negros para todas las filas y celdas */
+    padding: 8px;
+    text-align: center;
+    background-color: white; /* Fondo blanco para todas las celdas */
+    color: black; /* Letras negras para las celdas de datos */
+    border-radius: 10px;
+}
+
+/* Estilo de las celdas de encabezado */
+th {
+    background-color: var(--color2); /* Fondo gris oscuro para los encabezados */
+    color: var(--color1); /* Letras blancas para los encabezados */
+}
+
+/* Estilo para la celda de acciones */
+.actions {
+    display: flex; /* Usa flexbox para alinear los iconos */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    gap: 8px; /* Espacio entre los iconos */
+}
+
+.actions a {
+    display: flex; /* Usa flexbox para alinear la imagen dentro del enlace */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 4px;
+    color: gold; /* Letras doradas para las acciones */
+    background-color: black; /* Fondo negro para los botones de acción */
+}
+
+.actions a:hover {
+    background-color: #555; /* Color de fondo al pasar el cursor sobre los enlaces */
+}
+
+.btn-view {
+    background-color: #444; /* Fondo gris oscuro para el botón de ver */
+}
+
+.btn-edit {
+    background-color: #333; /* Fondo gris oscuro para el botón de editar */
+}
+
+.btn-copy {
+    background-color: #222; /* Fondo más oscuro para el botón de copiar */
+}
+
+.btn-delete {
+    background-color: #111; /* Fondo más oscuro para el botón de eliminar */
+}
+
+/* Estilo para las imágenes dentro de los enlaces de acción */
+.actions img {
+    width: 24px; /* Tamaño de las imágenes */
+    height: 24px; /* Mantén la altura igual para mantener el aspecto cuadrado */
+    display: block; /* Asegura que las imágenes se comporten como bloques */
+}
+.especial{
+    color: white;
+}
+/* Estilos para la sección de información del usuario */
+.user-info2 {
+    max-width: 100%;
+    text-align: left;
+}
+
+.user-section {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.label {
+    font-weight: bold;
+    color: var(--color1); /* Usamos el color1 definido en :root */
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.value {
+    color: var(--color2); /* Usamos el color2 definido en :root */
+}
+
+
+hr {
+    border: none;
+    border-top: 2px solid #cccccc;
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+textarea {
+    font-family: Arial, sans-serif;
+}
+
+.osito {
+    color: var(--color1);
+}
+.search-bar {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #aeaeae; /* Color de fondo */
+    border: 1px solid #ced4da; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px; /* Espacio entre el input y el texto "Buscar" */
+}
+
+.search-label {
+    background-color: var(--color1);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.paginacion-libros {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.paginacion-enlace {
+    margin: 0 5px;
+    padding: 8px 12px;
+    text-decoration: none;
+    background-color: #e0e0e0;
+    color: #333;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.paginacion-enlace.activo {
+    background-color: #333;
+    color: #fff;
+}
+
+.paginacion-enlace.deshabilitado {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.paginacion-enlace:hover:not(.activo):not(.deshabilitado) {
+    background-color: #ddd;
+}
