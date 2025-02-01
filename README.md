@@ -53,3 +53,7 @@ Este sistema ha sido desarrollado en PHP con soporte para gestión de usuarios, 
 ### 6. Buscador Integrado
 
 -   Implementación de un buscador para facilitar la consulta de registros.
+
+## Captura del sistema
+
+![Captura de pantalla 2025-02-01 a la(s) 1 17 08 a m](https://github.com/user-attachments/assets/12311b62-6ec6-46c3-9700-3745fdcd8f47)
